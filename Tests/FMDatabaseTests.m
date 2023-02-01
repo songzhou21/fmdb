@@ -342,7 +342,7 @@
     [self.db executeUpdate:@"create table blobTable (a text, b blob)"];
     
     // let's read an image from safari's app bundle.
-    NSData *safariCompass = [NSData dataWithContentsOfFile:@"/Applications/Safari.app/Contents/Resources/compass.icns"];
+    NSData *safariCompass = [NSData dataWithContentsOfFile:@"/Applications/Safari.app/Contents/Resources/AppIcon.icns"];
     if (safariCompass) {
         [self.db executeUpdate:@"insert into blobTable (a, b) values (?, ?)", @"safari's compass", safariCompass];
         
